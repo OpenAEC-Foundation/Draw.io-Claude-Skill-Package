@@ -91,3 +91,23 @@
 **Date:** 2026-03-19
 **Decision:** Twee externe MCP servers configureren voor directe bruikbaarheid: `drawio-mcp-server` (lgazo, CRUD) + `@drawio/mcp` (jgraph, officieel).
 **Rationale:** `drawio-mcp-server` (1100+ stars, v1.8.0, actief onderhouden) biedt volledige programmatische CRUD op diagram-elementen inclusief layers en ingebouwde editor. `@drawio/mcp` (1400+ stars, officieel van jgraph) biedt directe integratie met de Draw.io editor voor CSV/Mermaid conversie. Samen dekken ze alle directe behoeften af terwijl de custom MCP server (D-002) later wordt gebouwd.
+
+### D-019: Keep 22 Skills Unchanged After Research
+**Date:** 2026-03-19
+**Decision:** Keep all 22 skills from raw masterplan unchanged after deep research review.
+**Rationale:** All 4 vooronderzoek documents (3800+ lines) confirm sufficient scope for each skill. No overlaps warrant merging, no gaps require new skills. core-styles vs syntax-styles have clear scope boundaries (system understanding vs property catalog).
+
+### D-020: Cap Batches at 3 Parallel Agents
+**Date:** 2026-03-19
+**Decision:** Maximum 3 agents per batch, resulting in 8 batches for 22 skills.
+**Rationale:** WORKFLOW.md standard: "3 agents per batch (optimal for Claude Code Agent tool)". Raw masterplan had batches of 4 — adjusted for reliability.
+
+### D-021: Skip Separate Topic Research Phase (B4)
+**Date:** 2026-03-19
+**Decision:** Skip Phase B4 (Topic-Specific Research) as a separate phase. Agent prompts include specific source URLs for inline WebFetch during skill creation.
+**Rationale:** The 4 vooronderzoek documents (3800+ lines) provide comprehensive coverage. Each agent prompt includes relevant research document references and WebFetch URLs. Separate topic research docs would be redundant.
+
+### D-022: Directory Structure Follows WORKFLOW Standard
+**Date:** 2026-03-19
+**Decision:** Use `skills/source/drawio-{category}/{skill-name}/` directory structure.
+**Rationale:** Aligns with WORKFLOW.md standard for all skill packages. Differs from CLAUDE.md's initial `skills/drawio/` — the WORKFLOW standard takes precedence.
