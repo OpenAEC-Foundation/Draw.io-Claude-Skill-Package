@@ -92,7 +92,7 @@ Before ending any session:
 ## Repository Structure
 
 ```
-Draw.io/
+Draw.io-Claude-Skill-Package/
 ├── CLAUDE.md                    # This file
 ├── ROADMAP.md                   # Project status tracking
 ├── REQUIREMENTS.md              # Quality guarantees
@@ -102,25 +102,21 @@ Draw.io/
 ├── WAY_OF_WORK.md               # 7-phase methodology
 ├── CHANGELOG.md                 # Version history
 ├── INDEX.md                     # Complete skill catalog
+├── README.md                    # GitHub landing page
+├── LICENSE                      # MIT
 ├── docs/
 │   ├── masterplan/              # Project planning
 │   ├── research/                # Deep research (vooronderzoek)
-│   │   └── topic-research/      # Per-skill research
-│   └── validation/              # Validation reports
+│   └── social-preview-banner.html  # Social preview source
 ├── skills/
-│   └── drawio/
-│       ├── core/                # 3 foundation skills
-│       ├── syntax/              # 4 syntax skills
-│       ├── impl/                # 11 implementation skills
-│       ├── errors/              # 2 error handling skills
-│       └── agents/              # 2 agent skills
-└── mcp-server/                  # Custom MCP server (TypeScript)
-    ├── src/
-    │   ├── tools/               # 18 MCP tool implementations
-    │   ├── lib/                 # Core library (parser, builder, style engine)
-    │   └── types/               # TypeScript interfaces
-    ├── templates/               # Diagram templates (.xml)
-    └── test/                    # Integration tests
+│   └── source/
+│       ├── drawio-core/         # 3 foundation skills
+│       ├── drawio-syntax/       # 4 syntax skills
+│       ├── drawio-impl/         # 11 implementation skills
+│       ├── drawio-errors/       # 2 error handling skills
+│       └── drawio-agents/       # 2 agent skills
+└── mcp-server/                  # Custom MCP server (future)
+    └── (planned)
 ```
 
 ---

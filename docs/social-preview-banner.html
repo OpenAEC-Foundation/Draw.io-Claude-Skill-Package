@@ -2,290 +2,220 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=1280">
-<title>Draw.io Claude Skill Package — Social Preview</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Social Preview Banner — Draw.io Skill Package</title>
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html, body {
-    width: 1280px;
-    height: 640px;
-    overflow: hidden;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  body {
+    background: #2A2A32;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
   }
+
   .banner {
     width: 1280px;
     height: 640px;
-    background: linear-gradient(135deg, #2196F3 0%, #1565C0 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    background: #2A2A32;
     position: relative;
     overflow: hidden;
+    display: flex;
   }
 
-  /* Subtle background grid pattern */
+  .top-strip {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #F08705 0%, #2196F3 50%, #34D399 100%);
+  }
+
   .banner::before {
     content: '';
     position: absolute;
     inset: 0;
     background-image:
-      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
-    background-size: 40px 40px;
+      linear-gradient(rgba(250,250,249,0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(250,250,249,0.02) 1px, transparent 1px);
+    background-size: 30px 30px;
     pointer-events: none;
   }
 
-  /* Decorative XML snippet — left side */
-  .xml-snippet {
-    position: absolute;
-    left: 48px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-family: 'Consolas', 'Courier New', monospace;
-    font-size: 13px;
-    line-height: 1.7;
-    color: rgba(255,255,255,0.13);
-    white-space: pre;
-    pointer-events: none;
-    user-select: none;
+  .left {
+    position: relative; z-index: 1;
+    width: 50%;
+    padding: 72px 40px 56px 72px;
+    display: flex; flex-direction: column; justify-content: center;
   }
 
-  /* Decorative diagram shapes — right side */
-  .diagram-shapes {
-    position: absolute;
-    right: 56px;
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none;
-  }
-  .shape {
-    border: 2.5px solid rgba(255,255,255,0.15);
-    border-radius: 8px;
-    position: absolute;
-  }
-  .shape-rect {
-    width: 100px;
-    height: 48px;
-    top: -80px;
-    right: 0;
-  }
-  .shape-diamond {
-    width: 60px;
-    height: 60px;
-    top: 0px;
-    right: 20px;
-    transform: rotate(45deg);
-    border-radius: 4px;
-  }
-  .shape-rect2 {
-    width: 100px;
-    height: 48px;
-    top: 90px;
-    right: 0;
-    border-radius: 24px;
-  }
-  .connector {
-    position: absolute;
-    background: rgba(255,255,255,0.10);
-    pointer-events: none;
-  }
-  .conn-1 {
-    width: 2px;
-    height: 28px;
-    top: -30px;
-    right: 49px;
-  }
-  .conn-2 {
-    width: 2px;
-    height: 26px;
-    top: 62px;
-    right: 49px;
+  .number {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: 140px; font-weight: 700;
+    color: #FAFAF9; line-height: 0.85;
+    letter-spacing: -0.02em; margin-bottom: 10px;
   }
 
-  /* Content layer */
-  .content {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
-  }
-
-  /* Draw.io icon */
-  .icon-row {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 4px;
-  }
-  .drawio-icon {
-    width: 56px;
-    height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .drawio-icon svg {
-    width: 56px;
-    height: 56px;
-  }
-
-  h1 {
-    font-size: 56px;
-    font-weight: 700;
-    color: #ffffff;
-    letter-spacing: -1px;
-    text-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  .title {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: 26px; font-weight: 700;
+    color: #F08705;
+    letter-spacing: 4px; text-transform: uppercase;
+    margin-bottom: 22px;
   }
 
   .subtitle {
-    font-size: 22px;
-    font-weight: 400;
-    color: rgba(255,255,255,0.88);
-    letter-spacing: 0.3px;
-    margin-top: -4px;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 17px; color: #A1A1AA;
+    font-weight: 400; margin-bottom: 30px; line-height: 1.5;
   }
 
-  /* Badges row */
   .badges {
-    display: flex;
-    gap: 14px;
-    margin-top: 12px;
-  }
-  .badge {
-    display: flex;
-    align-items: center;
-    gap: 0;
-    border-radius: 6px;
-    overflow: hidden;
-    font-size: 15px;
-    font-weight: 600;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-  }
-  .badge-label {
-    background: rgba(255,255,255,0.95);
-    color: #1565C0;
-    padding: 8px 14px;
-  }
-  .badge-count {
-    background: rgba(255,255,255,0.22);
-    color: #ffffff;
-    padding: 8px 14px;
-    font-weight: 700;
-  }
-  .badge-sep {
-    color: rgba(255,255,255,0.35);
-    font-size: 24px;
-    font-weight: 300;
-    margin: 0 2px;
-    align-self: center;
+    display: flex; gap: 12px;
+    margin-bottom: 32px; flex-wrap: wrap;
   }
 
-  /* Footer */
-  .footer {
-    position: absolute;
-    bottom: 28px;
-    font-size: 14px;
-    color: rgba(255,255,255,0.50);
-    letter-spacing: 0.8px;
-    font-weight: 500;
+  .badge {
+    font-family: 'Inter', system-ui, sans-serif;
+    padding: 8px 20px; border-radius: 8px;
+    font-size: 13px; font-weight: 600;
+    background: transparent; border: 2px solid;
   }
-  .footer span {
-    margin: 0 10px;
-    opacity: 0.5;
+
+  .badge-1 { border-color: #F08705; color: #F08705; }
+  .badge-2 { border-color: #2196F3; color: #2196F3; }
+  .badge-3 { border-color: #34D399; color: #34D399; }
+
+  .versions {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; font-weight: 500;
+    color: #A1A1AA; letter-spacing: 0.05em;
+    display: flex; gap: 10px; align-items: center;
+  }
+  .versions .sep { color: rgba(250,250,249,0.1); }
+
+  .right {
+    position: relative; z-index: 1;
+    width: 50%;
+    padding: 56px 56px 56px 16px;
+    display: flex; align-items: center;
+  }
+
+  .code-window {
+    width: 100%;
+    background: rgba(54, 54, 62, 0.8);
+    border: 1px solid rgba(250,250,249,0.06);
+    border-radius: 12px; overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.3);
+    max-height: 100%;
+  }
+  .code-window * { overflow: hidden; }
+
+  .code-titlebar {
+    background: rgba(42, 42, 50, 0.95);
+    padding: 12px 16px;
+    display: flex; align-items: center; gap: 8px;
+    border-bottom: 1px solid rgba(250,250,249,0.04);
+  }
+
+  .dot { width: 12px; height: 12px; border-radius: 50%; }
+  .dot-red    { background: #DC2626; }
+  .dot-yellow { background: #F59E0B; }
+  .dot-green  { background: #16A34A; }
+
+  .code-filename {
+    color: #A1A1AA; font-size: 13px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500; margin-left: auto; margin-right: auto;
+  }
+
+  .code-body {
+    padding: 20px 24px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px; line-height: 1.7; color: #FAFAF9;
+  }
+
+  .comment  { color: #A1A1AA; }
+  .keyword  { color: #F08705; }
+  .function { color: #2196F3; }
+  .string   { color: #34D399; }
+  .operator { color: #A855F7; }
+  .type     { color: #3178C6; }
+  .cursor {
+    display: inline-block; width: 8px; height: 17px;
+    background: #F08705; vertical-align: text-bottom;
+  }
+
+  .foundation {
+    position: absolute; bottom: 28px; right: 44px;
+    text-align: right; z-index: 1;
+  }
+  .foundation-name {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: 18px; font-weight: 700; letter-spacing: 0.5px;
+  }
+  .foundation-name .open { color: #FAFAF9; }
+  .foundation-name .aec  { color: #F08705; }
+  .foundation-sub {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 11px; color: #A1A1AA;
+    font-weight: 500; letter-spacing: 1px;
   }
 </style>
 </head>
 <body>
-<div class="banner">
+  <div class="banner">
+    <div class="top-strip"></div>
 
-  <!-- Decorative XML snippet on the left -->
-  <div class="xml-snippet">&lt;mxGraphModel&gt;
-  &lt;root&gt;
-    &lt;mxCell id="0"/&gt;
-    &lt;mxCell id="1" parent="0"/&gt;
-    &lt;mxCell id="2" value="Start"
-      style="rounded=1;
-        fillColor=#2196F3;
-        fontColor=#FFFFFF;"
-      vertex="1" parent="1"&gt;
-      &lt;mxGeometry x="120"
-        y="80" width="160"
-        height="60" as="geometry"/&gt;
-    &lt;/mxCell&gt;
-    &lt;mxCell id="3" value=""
-      style="edgeStyle=
-        orthogonalEdgeStyle;"
-      edge="1" source="2"
-      target="4" parent="1"/&gt;
-  &lt;/root&gt;
-&lt;/mxGraphModel&gt;</div>
+    <div class="left">
+      <div class="number">22</div>
+      <div class="title">Deterministic Skills</div>
+      <div class="subtitle">for flawless Draw.io diagram generation</div>
 
-  <!-- Decorative diagram shapes on the right -->
-  <div class="diagram-shapes">
-    <div class="shape shape-rect"></div>
-    <div class="connector conn-1"></div>
-    <div class="shape shape-diamond"></div>
-    <div class="connector conn-2"></div>
-    <div class="shape shape-rect2"></div>
-  </div>
+      <div class="badges">
+        <div class="badge badge-1">Draw.io</div>
+        <div class="badge badge-2">mxGraph XML</div>
+        <div class="badge badge-3">11 Diagram Types</div>
+      </div>
 
-  <!-- Main content -->
-  <div class="content">
-    <div class="icon-row">
-      <div class="drawio-icon">
-        <!-- Simplified Draw.io-style node/edge icon -->
-        <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="4" y="4" width="22" height="16" rx="3" fill="rgba(255,255,255,0.9)"/>
-          <rect x="30" y="36" width="22" height="16" rx="3" fill="rgba(255,255,255,0.9)"/>
-          <line x1="15" y1="20" x2="15" y2="32" stroke="rgba(255,255,255,0.7)" stroke-width="2.5" stroke-linecap="round"/>
-          <line x1="15" y1="32" x2="41" y2="32" stroke="rgba(255,255,255,0.7)" stroke-width="2.5" stroke-linecap="round"/>
-          <line x1="41" y1="32" x2="41" y2="36" stroke="rgba(255,255,255,0.7)" stroke-width="2.5" stroke-linecap="round"/>
-          <circle cx="15" cy="20" r="3" fill="rgba(255,255,255,0.7)"/>
-          <polygon points="41,36 38,31 44,31" fill="rgba(255,255,255,0.7)"/>
-        </svg>
-      </div>
-      <h1>Draw.io Claude Skill Package</h1>
-    </div>
-
-    <p class="subtitle">22 Deterministic Skills for mxGraph XML Generation</p>
-
-    <div class="badges">
-      <div class="badge">
-        <div class="badge-label">Core</div>
-        <div class="badge-count">3</div>
-      </div>
-      <div class="badge-sep">|</div>
-      <div class="badge">
-        <div class="badge-label">Syntax</div>
-        <div class="badge-count">4</div>
-      </div>
-      <div class="badge-sep">|</div>
-      <div class="badge">
-        <div class="badge-label">Impl</div>
-        <div class="badge-count">11</div>
-      </div>
-      <div class="badge-sep">|</div>
-      <div class="badge">
-        <div class="badge-label">Errors</div>
-        <div class="badge-count">2</div>
-      </div>
-      <div class="badge-sep">|</div>
-      <div class="badge">
-        <div class="badge-label">Agents</div>
-        <div class="badge-count">2</div>
+      <div class="versions">
+        diagrams.net <span class="sep">|</span> mxGraph 4.x <span class="sep">|</span> Claude Code
       </div>
     </div>
-  </div>
 
-  <!-- Footer -->
-  <div class="footer">
-    OpenAEC Foundation <span>&bull;</span> MIT License <span>&bull;</span> Claude Code
-  </div>
+    <div class="right">
+      <div class="code-window">
+        <div class="code-titlebar">
+          <div class="dot dot-red"></div>
+          <div class="dot dot-yellow"></div>
+          <div class="dot dot-green"></div>
+          <span class="code-filename">diagram.drawio</span>
+        </div>
+        <div class="code-body">
+          <span class="comment">&lt;!-- mxGraph XML --&gt;</span><br>
+          <span class="keyword">&lt;mxGraphModel&gt;</span><br>
+          &nbsp;&nbsp;<span class="function">&lt;root&gt;</span><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="type">&lt;mxCell</span> <span class="string">id="0"</span> <span class="type">/&gt;</span><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="type">&lt;mxCell</span> <span class="string">id="1"</span> <span class="string">parent="0"</span> <span class="type">/&gt;</span><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="type">&lt;mxCell</span> <span class="string">id="2"</span><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">value=</span><span class="string">"Process"</span><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">style=</span><span class="string">"rounded=1;</span><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">fillColor=#dae8fc;</span><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">html=1;"</span><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">vertex=</span><span class="string">"1"</span><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">parent="1"</span> <span class="type">/&gt;</span><br>
+          &nbsp;&nbsp;<span class="function">&lt;/root&gt;</span><br>
+          <span class="keyword">&lt;/mxGraphModel&gt;</span><span class="cursor"></span>
+        </div>
+      </div>
+    </div>
 
-</div>
+    <div class="foundation">
+      <div class="foundation-name"><span class="open">Open</span><span class="aec">AEC</span></div>
+      <div class="foundation-sub">Foundation</div>
+    </div>
+  </div>
 </body>
 </html>

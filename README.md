@@ -1,6 +1,8 @@
 # Draw.io Claude Skill Package
 
-![Social Preview](docs/social-preview.png)
+<p align="center">
+  <img src="docs/social-preview.png" alt="22 Deterministic Skills for Draw.io" width="100%">
+</p>
 
 ## Overview
 
