@@ -390,3 +390,9 @@ endArrow=open;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;
 - **Connection details:** See `drawio-syntax-connections` for edge routing and waypoints.
 - **Geometry:** See `drawio-core-geometry` for coordinate system and positioning.
 - **Swimlanes:** See `drawio-impl-swimlanes` for container and lane patterns.
+
+## Reference Links
+
+- [Complete Reference](references/methods.md)
+- [Working Examples](references/examples.md)
+- [Anti-Patterns](references/anti-patterns.md)

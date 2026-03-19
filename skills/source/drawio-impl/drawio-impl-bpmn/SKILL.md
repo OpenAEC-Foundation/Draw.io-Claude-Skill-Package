@@ -251,3 +251,9 @@ Data objects and data stores connect to activities using association flows (dash
 - **Style syntax:** See `drawio-syntax-styles` for the complete style property reference.
 - **Connection details:** See `drawio-syntax-connections` for edge routing and waypoints.
 - **Geometry:** See `drawio-core-geometry` for coordinate system and positioning.
+
+## Reference Links
+
+- [Complete Reference](references/methods.md)
+- [Working Examples](references/examples.md)
+- [Anti-Patterns](references/anti-patterns.md)

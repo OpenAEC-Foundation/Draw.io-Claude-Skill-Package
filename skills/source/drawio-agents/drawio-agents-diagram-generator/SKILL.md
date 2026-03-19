@@ -170,16 +170,16 @@ Before generating XML from scratch, check if a template fits:
 Does the user's request match a standard diagram pattern?
 |
 +-- Standard flowchart (< 10 steps)
-|     CONSIDER using a flowchart template as starting point.
+|     ALWAYS check for an existing flowchart template first.
 |
 +-- AWS/Azure/GCP architecture
-|     CONSIDER using cloud-specific templates with official icons.
+|     USE cloud-specific templates with official icons.
 |
 +-- BPMN process
-|     CONSIDER using a BPMN template with pre-configured pools/lanes.
+|     USE a BPMN template with pre-configured pools/lanes.
 |
 +-- Org chart
-|     CONSIDER using an org chart template with tree layout.
+|     PREFER an org chart template with tree layout.
 |
 +-- No template matches
       GENERATE from scratch using the implementation skill.
@@ -393,3 +393,9 @@ When presenting a generated diagram, use this structure:
 - **XML fundamentals:** See `drawio-core-xml-format` for file structure details.
 - **Style reference:** See `drawio-core-styles` for complete style property catalog.
 - **Error diagnosis:** See `drawio-errors-xml` for troubleshooting generation failures.
+
+## Reference Links
+
+- [Complete Reference](references/methods.md)
+- [Working Examples](references/examples.md)
+- [Anti-Patterns](references/anti-patterns.md)

@@ -318,3 +318,9 @@ This example demonstrates:
 - **Connection details:** See `drawio-syntax-connections` for edge routing and waypoints.
 - **Geometry:** See `drawio-core-geometry` for coordinate system and positioning.
 - **Flowchart shapes:** See `drawio-impl-flowcharts` for ISO 5807 shapes used inside lanes.
+
+## Reference Links
+
+- [Complete Reference](references/methods.md)
+- [Working Examples](references/examples.md)
+- [Anti-Patterns](references/anti-patterns.md)

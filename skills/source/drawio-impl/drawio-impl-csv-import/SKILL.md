@@ -327,3 +327,9 @@ srv-mail,10.0.2.10,server,sw-floor2
 - **Style syntax:** See `drawio-syntax-styles` for the complete style property reference.
 - **Connection details:** See `drawio-syntax-connections` for edge routing and style options.
 - **Flowcharts:** See `drawio-impl-flowcharts` for flowchart-specific shapes and patterns.
+
+## Reference Links
+
+- [Complete Reference](references/methods.md)
+- [Working Examples](references/examples.md)
+- [Anti-Patterns](references/anti-patterns.md)

@@ -396,3 +396,9 @@ When using the `mxCompactTreeLayout` programmatically:
 | `levelDistance` | `60` | Gap between hierarchy levels |
 | `nodeDistance` | `20` | Gap between sibling nodes |
 | `edgeRouting` | `curved` | ALWAYS use curved for mind maps |
+
+## Reference Links
+
+- [Complete Reference](references/methods.md)
+- [Working Examples](references/examples.md)
+- [Anti-Patterns](references/anti-patterns.md)

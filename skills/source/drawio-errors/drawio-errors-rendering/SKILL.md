@@ -422,3 +422,9 @@ ALWAYS use a minimum gap of 40 pixels when shapes have external labels.
 - [drawio-core-geometry](../../drawio-core/drawio-core-geometry/SKILL.md) — Coordinate system and geometry
 - [drawio-core-xml-format](../../drawio-core/drawio-core-xml-format/SKILL.md) — XML structure fundamentals
 - [drawio-syntax-connections](../../drawio-syntax/drawio-syntax-connections/SKILL.md) — Edge and connection details
+
+## Reference Links
+
+- [Complete Reference](references/methods.md)
+- [Working Examples](references/examples.md)
+- [Anti-Patterns](references/anti-patterns.md)

@@ -399,3 +399,9 @@ Every content cell MUST have:
 - Either `vertex="1"` or `edge="1"`
 - A `style` attribute containing at minimum `html=1`
 - A child `<mxGeometry as="geometry" ... />` element
+
+## Reference Links
+
+- [Complete Reference](references/methods.md)
+- [Working Examples](references/examples.md)
+- [Anti-Patterns](references/anti-patterns.md)

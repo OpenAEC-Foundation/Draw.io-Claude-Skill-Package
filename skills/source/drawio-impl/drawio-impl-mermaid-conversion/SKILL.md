@@ -251,3 +251,9 @@ When you need BOTH Mermaid readability AND individual cell control:
 3. Maintain both as needed
 
 **NEVER attempt to "ungroup" or "explode" a Mermaid compound shape into individual cells.** This is NOT supported by Draw.io.
+
+## Reference Links
+
+- [Complete Reference](references/methods.md)
+- [Working Examples](references/examples.md)
+- [Anti-Patterns](references/anti-patterns.md)

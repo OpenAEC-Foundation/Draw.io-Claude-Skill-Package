@@ -425,3 +425,9 @@ These are the errors AI systems make most frequently, in order of likelihood:
 3. **Generating compressed content** — Producing fake Base64 strings that cannot be decompressed.
 4. **Duplicate IDs** — Reusing IDs across cells, especially when generating loops programmatically.
 5. **Wrong HTML escaping** — Either missing escaping (raw `<` in values) or double-escaping (`&amp;lt;`).
+
+## Reference Links
+
+- [Complete Reference](references/methods.md)
+- [Working Examples](references/examples.md)
+- [Anti-Patterns](references/anti-patterns.md)

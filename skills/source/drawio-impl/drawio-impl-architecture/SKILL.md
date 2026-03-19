@@ -295,3 +295,9 @@ ALWAYS use relative coordinates for child elements within containers.
 - **Connection details:** See `drawio-syntax-connections` for edge routing and waypoints.
 - **Cloud network stencils:** See `drawio-impl-network` for Cisco stencils, zone boundaries, and network topology patterns.
 - **Geometry:** See `drawio-core-geometry` for coordinate system and positioning.
+
+## Reference Links
+
+- [Complete Reference](references/methods.md)
+- [Working Examples](references/examples.md)
+- [Anti-Patterns](references/anti-patterns.md)

@@ -443,3 +443,9 @@ Input: { "mermaid": "graph TD\n  A[Start] --> B[Process]\n  B --> C{Decision}\n 
 - **Connection details:** See `drawio-syntax-connections` for edge routing and waypoints.
 - **Flowcharts:** See `drawio-impl-flowcharts` for flowchart-specific shapes and patterns.
 - **Geometry:** See `drawio-core-geometry` for coordinate system and positioning.
+
+## Reference Links
+
+- [Complete Reference](references/methods.md)
+- [Working Examples](references/examples.md)
+- [Anti-Patterns](references/anti-patterns.md)
