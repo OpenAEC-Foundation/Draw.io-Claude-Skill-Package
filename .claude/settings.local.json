@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "defaultMode": "bypassPermissions",
+    "allow": [
+      "Bash(*)",
+      "Edit(*)",
+      "Write(*)",
+      "Read(*)",
+      "WebSearch",
+      "WebFetch(*)",
+      "WebFetch(domain:claude.com)",
+      "WebFetch(domain:resources.anthropic.com)",
+      "Skill(update-config)"
+    ],
+    "deny": []
+  }
+}
