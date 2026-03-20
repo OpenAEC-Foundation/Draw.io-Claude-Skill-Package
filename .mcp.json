@@ -1,22 +1,10 @@
 {
   "mcpServers": {
-    "drawio-editor": {
-      "command": "npx",
-      "args": ["-y", "drawio-mcp-server", "--editor"],
-      "env": {},
-      "_description": "Live CRUD editing: shapes, edges, layers, cell inspectie via WebSocket op localhost:3000"
-    },
-    "drawio-converter": {
-      "command": "npx",
-      "args": ["-y", "@drawio/mcp"],
-      "env": {},
-      "_description": "Officieel Draw.io MCP: opent XML/CSV/Mermaid direct in Draw.io browser of desktop app"
-    },
     "drawio-generator": {
       "command": "drawio-mcp",
       "args": [],
       "env": {},
-      "_description": "Geavanceerd genereren: 310+ shape presets, auto-layout (Sugiyama/tree/grid), smart edge routing, themes, .drawio bestandsbeheer"
+      "_description": "Volledig Draw.io diagram generatie: 310+ shape presets, auto-layout (Sugiyama/tree/grid/flowchart), smart edge routing, themes, containers/swimlanes, .drawio bestandsbeheer. Installatie: pip install drawio-mcp"
     }
   }
 }

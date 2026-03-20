@@ -6,7 +6,7 @@
 
 ## Overview
 
-22 deterministic Claude skills for programmatic Draw.io diagram generation. Covers the complete mxGraph XML ecosystem: format, styles, geometry, 11 diagram types, error diagnosis, and intelligent orchestration.
+22 deterministic Claude skills + MCP server for programmatic Draw.io diagram generation. Covers the complete mxGraph XML ecosystem: format, styles, geometry, 11 diagram types, error diagnosis, and intelligent orchestration.
 
 ## Skills
 
@@ -19,181 +19,89 @@
 | Agents | 2 | Diagram generator, code validator |
 | **Total** | **22** | |
 
-## End-to-End Setup: Van 0 naar "Claude tekent in Draw.io"
+## MCP Server
 
-### Vereisten
+This package includes a pre-configured MCP server (`drawio-mcp`) that gives Claude hands to actually create Draw.io diagrams:
 
-- [Node.js](https://nodejs.org/) v18+
-- [Claude Code](https://code.claude.com/) CLI
-- Draw.io Desktop **of** een browser
+- **310+ shape presets** — architecture, flowchart, BPMN, UML, network, mockup, etc.
+- **Auto-layout** — Sugiyama (DAG), tree, grid, flowchart, smart routing
+- **Containers & swimlanes** — proper nesting with parent-child relationships
+- **Themes** — BLUE, GREEN, DARK, ORANGE, PURPLE + custom styling
+- **File management** — create, save, load `.drawio` files directly
 
-### Stap 1: Clone en installeer skills
+## Setup
+
+### 1. Install the MCP server
 
 ```bash
-# Clone het skill package
+pip install drawio-mcp
+```
+
+### 2. Install skills + MCP config
+
+```bash
 git clone https://github.com/OpenAEC-Foundation/Draw.io-Claude-Skill-Package.git
 
-# Optie A: Kopieer skills naar je globale Claude skills directory
+# Copy skills to your Claude skills directory
 cp -r Draw.io-Claude-Skill-Package/skills/source/* ~/.claude/skills/
 
-# Optie B: Gebruik als project-level skills
-cp -r Draw.io-Claude-Skill-Package/skills/source/* .claude/skills/
-
-# Optie C: Refereer via --add-dir in een workspace
-# claude --add-dir /pad/naar/Draw.io-Claude-Skill-Package
+# Copy MCP config to your project
+cp Draw.io-Claude-Skill-Package/.mcp.json your-project/.mcp.json
 ```
 
-### Stap 2: Configureer MCP servers
-
-Kopieer `.mcp.json` naar je project root, of merge met je bestaande config:
+### 3. Start drawing
 
 ```bash
-cp Draw.io-Claude-Skill-Package/.mcp.json .mcp.json
-```
-
-Dit configureert **3 complementaire MCP servers**:
-
-| Server | Package | Wat het doet |
-|--------|---------|-------------|
-| `drawio-editor` | `drawio-mcp-server` (lgazo) | Live CRUD: shapes toevoegen/bewerken/verwijderen, layers beheren, WebSocket editor op `localhost:3000` |
-| `drawio-converter` | `@drawio/mcp` (jgraph, officieel) | Opent XML/CSV/Mermaid direct in Draw.io browser of desktop app |
-| `drawio-generator` | `drawio-mcp` | Geavanceerd genereren: 310+ shape presets, auto-layout, smart routing, themes, .drawio bestanden opslaan |
-
-> **Welke server wanneer?**
-> - Wil je een **bestand genereren en opslaan**? → `drawio-generator`
-> - Wil je **live editen** in een browser? → `drawio-editor`
-> - Wil je **Mermaid/CSV converteren** en openen in Draw.io? → `drawio-converter`
-
-### Stap 3: Installeer MCP server dependencies
-
-```bash
-# Node.js MCP servers (auto-download via npx bij eerste gebruik)
-# Optioneel pre-installeren voor snellere startup:
-npm install -g drawio-mcp-server @drawio/mcp
-
-# Python MCP server (drawio-generator) — de krachtigste van de drie:
-pip install drawio-mcp
-# Bron: https://github.com/yohasacura/drawio-mcp
-```
-
-### Stap 4: Verifieer dat alles werkt
-
-Start Claude Code in je project directory:
-
-```bash
+cd your-project
 claude
 ```
 
-Typ in Claude:
+Ask Claude to create any diagram — it generates `.drawio` files you open in Draw.io.
+
+## How it works
 
 ```
-Maak een simpele flowchart met 3 stappen en sla het op als test.drawio
+┌──────────────────────────────────────────┐
+│              Claude Code                  │
+│                                           │
+│  22 Skills         MCP: drawio-generator  │
+│  (domain knowledge)   (the hands)         │
+│                                           │
+│  Skills teach HOW    MCP tools:           │
+│  to structure         ├─ diagram()        │
+│  mxGraph XML          ├─ draw()           │
+│                       ├─ style()          │
+│                       ├─ layout()         │
+│                       └─ inspect()        │
+└───────────────┬──────────────────────────┘
+                ▼
+         .drawio files → open in Draw.io
 ```
 
-Als je een `.drawio` bestand krijgt dat opent in Draw.io → alles werkt.
+## Quick start examples
 
-### Stap 5 (optioneel): Workspace opzetten
+**Flowchart:**
+> Maak een flowchart voor een login proces met validatie en error handling
 
-Voor een dedicated Draw.io workspace met alle functies:
+**Architecture:**
+> Maak een architectuurdiagram: API Gateway → Auth, Users, Orders → PostgreSQL
 
-```bash
-mkdir draw-workspace && cd draw-workspace
-cp /pad/naar/Draw.io-Claude-Skill-Package/.mcp.json .
-cp /pad/naar/Draw.io-Claude-Skill-Package/CLAUDE.md .
+**ER-diagram:**
+> Maak een ER-diagram met Users, Orders, Products en crow's foot notatie
 
-# Start Claude met het skill package als extra directory
-claude --add-dir /pad/naar/Draw.io-Claude-Skill-Package
-```
-
-## MCP Server Architectuur
-
-```
-┌─────────────────────────────────────────────────────┐
-│                    Claude Code                       │
-│                                                      │
-│  ┌──────────────┐  ┌──────────────┐  ┌────────────┐ │
-│  │ 22 Skills    │  │ CLAUDE.md    │  │ /commands  │ │
-│  │ (on-demand)  │  │ (altijd)     │  │ (user)     │ │
-│  └──────┬───────┘  └──────────────┘  └────────────┘ │
-│         │                                            │
-│  ┌──────▼────────────────────────────────────────┐  │
-│  │              MCP Tool Layer                    │  │
-│  │                                                │  │
-│  │  drawio-generator    drawio-editor    drawio-  │  │
-│  │  ├─ create           ├─ add_cell     converter │  │
-│  │  ├─ build_dag        ├─ add_conn     ├─ xml    │  │
-│  │  ├─ build_full       ├─ edit_cell    ├─ csv    │  │
-│  │  ├─ add_vertices     ├─ delete       ├─ mermaid│  │
-│  │  ├─ layout/polish    ├─ layers       └─────────│  │
-│  │  ├─ style/theme      └──────────────           │  │
-│  │  └─ save/load                                  │  │
-│  └───────────────────────────────────────────────┘  │
-│         │                    │                │      │
-└─────────┼────────────────────┼────────────────┼──────┘
-          ▼                    ▼                ▼
-   .drawio bestanden    localhost:3000    Draw.io app
-   (op schijf)         (live editor)    (desktop/browser)
-```
-
-## Hoe de Skills werken met MCP
-
-De skills leren Claude **hoe** diagrammen te maken (mxGraph XML kennis), de MCP servers geven Claude **de handen** om het daadwerkelijk te doen:
-
-1. **Gebruiker:** "Maak een ER-diagram van mijn database"
-2. **Claude laadt:** `drawio-agents-diagram-generator` skill (orkestratie)
-3. **Skill kiest:** `drawio-impl-er-diagrams` (technische details)
-4. **Claude gebruikt:** `drawio-generator` MCP om het diagram te bouwen
-5. **Resultaat:** `.drawio` bestand op schijf, klaar om te openen
-
-## Quick Start Voorbeelden
-
-### Flowchart
-```
-Maak een flowchart voor een login proces:
-1. Gebruiker voert credentials in
-2. Valideer input
-3. Check database
-4. Als geldig → dashboard, anders → foutmelding
-```
-
-### Architectuurdiagram
-```
-Maak een architectuurdiagram van een microservices systeem:
-- API Gateway → Auth Service, User Service, Order Service
-- User Service → PostgreSQL
-- Order Service → MongoDB, Redis cache
-```
-
-### ER-Diagram
-```
-Maak een ER-diagram:
-- Users (id, name, email)
-- Orders (id, user_id, total, status)
-- Products (id, name, price)
-- OrderItems (order_id, product_id, quantity)
-Met crow's foot notatie.
-```
-
-### Mermaid conversie
-```
-Converteer dit Mermaid diagram naar Draw.io:
-graph TD
-    A[Start] --> B{Is valid?}
-    B -->|Yes| C[Process]
-    B -->|No| D[Error]
-    C --> E[End]
-```
+**Dark theme dashboard:**
+> Maak een donker-thema wireframe van een admin dashboard met sidebar en KPI cards
 
 ## Technology
 
 - **Draw.io / diagrams.net** — Open source (Apache 2.0)
 - **mxGraph XML format** — Version 4.x compatible
-- **Claude Code** — Designed for Claude Code skill system
-- **MCP (Model Context Protocol)** — 3 complementary servers
+- **[drawio-mcp](https://github.com/yohasacura/drawio-mcp)** — MCP server (Python)
+- **Claude Code** — Skill system + MCP integration
 
 ## Methodology
 
-Built using the proven 7-phase research-first methodology. 4 deep research documents (3800+ lines), refined masterplan with agent prompts, 8 quality-gated batches.
+Built using the 7-phase research-first methodology. 4 deep research documents (3800+ lines), 8 quality-gated batches.
 
 ## License
 
