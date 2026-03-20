@@ -379,7 +379,7 @@ swimlane;html=1;startSize=30;container=1;collapsible=0;
 
 ### E-019: Nonexistent Shape Name
 
-**Symptom:** Shape renders as a plain rectangle, sometimes with a red X or missing icon.
+**Symptom:** Shape renders as a plain rectangle, potentially displaying a red X or missing icon.
 
 **Root Cause:** AI generated an invented shape name that does not exist in Draw.io's shape registry. Common invented names: `shape=server`, `shape=database`, `shape=cloud-server`, `shape=api-gateway`.
 

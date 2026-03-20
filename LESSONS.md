@@ -58,11 +58,11 @@ _Lessons from this project and inherited from Blender/ERPNext packages._
 
 ### L-014: Research → Core Files Flow
 **Source:** User feedback, 2026-03-16
-**Lesson:** Research findings MUST ALWAYS be verwerkt (processed) into the core bestanden (CLAUDE.md, REQUIREMENTS.md, LESSONS.md, DECISIONS.md, SOURCES.md, WAY_OF_WORK.md). Na verwerking: markeer het research document met een verwerkt-status. Research is pas "af" als het in de core files staat.
+**Lesson:** Research findings MUST ALWAYS be processed into the core files (CLAUDE.md, REQUIREMENTS.md, LESSONS.md, DECISIONS.md, SOURCES.md, WAY_OF_WORK.md). After processing: mark the research document with a processed status. Research is only "done" when it is reflected in the core files.
 
-### L-015: NOOIT Fundamentele Vragen Interpreteren
+### L-015: NEVER Interpret Fundamental Questions
 **Source:** User feedback, 2026-03-16
-**Lesson:** NOOIT fundamentele vragen zelf interpreteren of beantwoorden. ALTIJD expliciet aan de user vragen. Leg open vragen vast in OPEN-QUESTIONS.md. Dit geldt voor alle architectuur-, scope-, aanpak- en toolkeuze-beslissingen. Interpretaties zijn ALLEEN toegestaan voor triviale implementatiedetails.
+**Lesson:** NEVER interpret or answer fundamental questions on your own. ALWAYS ask the user explicitly. Record open questions in OPEN-QUESTIONS.md. This applies to all architecture, scope, approach, and tool choice decisions. Interpretations are ONLY permitted for trivial implementation details.
 
 ### L-016: AI XML Generation — Always Uncompressed
 **Source:** drawio.com/doc/faq/ai-drawio-generation, B1 research (2026-03-19)

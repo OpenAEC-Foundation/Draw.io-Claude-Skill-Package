@@ -64,33 +64,33 @@
 
 ### D-013: E2E Scripts per Skill
 **Date:** 2026-03-16
-**Decision:** Bundle comprehensive scripts/ per skill: validators, generators, and helpers. Goal: ontzorg de gebruiker, maximale E2E functionaliteit.
+**Decision:** Bundle comprehensive scripts/ per skill: validators, generators, and helpers. Goal: fully support the user with maximum end-to-end functionality.
 **Rationale:** Anthropic's guide: "Code is deterministic; language interpretation isn't." Scripts make skills reliable and testable.
 
 ### D-014: Community Skills Analysis in Research Phase
 **Date:** 2026-03-16
-**Decision:** Grondig analyseren van alle bestaande Draw.io community skills (ekusiadadus/draw-mcp, drawio-diagrams-enhanced, softaworks/agent-toolkit) als onderdeel van fase B2.
-**Rationale:** Leren van bestaande aanpakken en fouten. Documenteren in `community-skills-analysis.md`.
+**Decision:** Thoroughly analyze all existing Draw.io community skills (ekusiadadus/draw-mcp, drawio-diagrams-enhanced, softaworks/agent-toolkit) as part of phase B2.
+**Rationale:** Learn from existing approaches and mistakes. Document findings in `community-skills-analysis.md`.
 
 ### D-015: Hybride MCP Server Approach
 **Date:** 2026-03-16
-**Decision:** Bestaande MCP servers (jgraph, Sujimoshi, lgazo) bestuderen voor patronen, maar eigen server from scratch bouwen.
-**Rationale:** Best of both worlds: leer van bestaande implementaties, maar zonder technische schuld van een fork.
+**Decision:** Study existing MCP servers (jgraph, Sujimoshi, lgazo) for patterns, but build our own server from scratch.
+**Rationale:** Best of both worlds: learn from existing implementations, but without the technical debt of a fork.
 
 ### D-016: Draw.io Direct, Template Later
 **Date:** 2026-03-16
-**Decision:** Draw.io skill package direct ontwikkelen (Project B). Skill-Package-Workflow-Template (Project A) achteraf extraheren.
-**Rationale:** Draw.io workspace is al gebootstrapt. Template wordt geextraheerd als levend voorbeeld, niet als abstract ontwerp.
+**Decision:** Develop the Draw.io skill package directly (Project B). Extract the Skill-Package-Workflow-Template (Project A) afterwards.
+**Rationale:** The Draw.io workspace is already bootstrapped. The template will be extracted as a living example, not as an abstract design.
 
 ### D-017: Claude-First, No agentskills.io Compliance
 **Date:** 2026-03-16
-**Decision:** Focus op het Claude ecosystem. Geen expliciete agentskills.io open standard compliance.
-**Rationale:** Claude-specifieke features (allowed-tools, plugin marketplace, progressive disclosure) vrij gebruiken zonder cross-platform beperkingen.
+**Decision:** Focus on the Claude ecosystem. No explicit agentskills.io open standard compliance.
+**Rationale:** Freely use Claude-specific features (allowed-tools, plugin marketplace, progressive disclosure) without cross-platform restrictions.
 
 ### D-018: Dual External MCP Configuration
 **Date:** 2026-03-19
-**Decision:** Twee externe MCP servers configureren voor directe bruikbaarheid: `drawio-mcp-server` (lgazo, CRUD) + `@drawio/mcp` (jgraph, officieel).
-**Rationale:** `drawio-mcp-server` (1100+ stars, v1.8.0, actief onderhouden) biedt volledige programmatische CRUD op diagram-elementen inclusief layers en ingebouwde editor. `@drawio/mcp` (1400+ stars, officieel van jgraph) biedt directe integratie met de Draw.io editor voor CSV/Mermaid conversie. Samen dekken ze alle directe behoeften af terwijl de custom MCP server (D-002) later wordt gebouwd.
+**Decision:** Configure two external MCP servers for immediate usability: `drawio-mcp-server` (lgazo, CRUD) + `@drawio/mcp` (jgraph, official).
+**Rationale:** `drawio-mcp-server` (1100+ stars, v1.8.0, actively maintained) provides full programmatic CRUD on diagram elements including layers and a built-in editor. `@drawio/mcp` (1400+ stars, official from jgraph) provides direct integration with the Draw.io editor for CSV/Mermaid conversion. Together they cover all immediate needs while the custom MCP server (D-002) is built later.
 
 ### D-019: Keep 22 Skills Unchanged After Research
 **Date:** 2026-03-19
@@ -111,3 +111,13 @@
 **Date:** 2026-03-19
 **Decision:** Use `skills/source/drawio-{category}/{skill-name}/` directory structure.
 **Rationale:** Aligns with WORKFLOW.md standard for all skill packages. Differs from CLAUDE.md's initial `skills/drawio/` — the WORKFLOW standard takes precedence.
+
+### D-023: Core-Styles vs Syntax-Styles Scope Boundary
+**Date:** 2026-03-19
+**Decision:** Maintain separate core-styles and syntax-styles skills with clear scope boundaries: core-styles covers system understanding (format, inheritance, perimeters, color system), syntax-styles covers the complete property reference catalog (120+ properties).
+**Rationale:** Research confirmed both skills have sufficient distinct scope. core-styles is for understanding HOW the style system works, syntax-styles is for looking up WHAT properties exist. Different audiences, no duplication.
+
+### D-024: Extended YAML Frontmatter Fields
+**Date:** 2026-03-19
+**Decision:** Add license, compatibility, and metadata fields to all skill YAML frontmatter, beyond the minimum name+description.
+**Rationale:** WORKFLOW template standard requires these fields for distribution readiness. Enables future plugin marketplace submission.
