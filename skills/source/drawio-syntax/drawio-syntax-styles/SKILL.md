@@ -13,7 +13,7 @@ metadata:
   version: "1.0"
 ---
 
-# Draw.io Syntax — Style Properties Reference
+# Draw.io Syntax: Style Properties Reference
 
 > Complete catalog of every Draw.io style property, shape name, arrow type, edge
 > routing algorithm, and stencil format. Use this skill to look up exact property

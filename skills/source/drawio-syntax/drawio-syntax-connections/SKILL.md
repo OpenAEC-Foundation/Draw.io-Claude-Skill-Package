@@ -42,7 +42,7 @@ Is the edge connecting a shape to ITSELF?
   NO  --> Standard connection
 ```
 
-### Floating Connection (Default — Auto-Routes Along Perimeter)
+### Floating Connection (Default: Auto-Routes Along Perimeter)
 
 Floating connections let Draw.io choose the optimal attachment points. The edge endpoint slides along the shape perimeter as shapes move.
 

@@ -59,7 +59,7 @@ Step 5: VALIDATE
   Offer to open in Draw.io.
 ```
 
-## Section 2: Decision Tree — User Intent to Diagram Type
+## Section 2: Decision Tree: User Intent to Diagram Type
 
 Start at the top. Follow the first matching branch.
 

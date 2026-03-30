@@ -32,7 +32,7 @@ This skill enables correct generation of network topology diagrams, infrastructu
 
 ## Stencil Namespace Reference
 
-### Cisco (Modern — cisco19)
+### Cisco (Modern: cisco19)
 
 | Device | Style | Dimensions |
 |--------|-------|-----------|
@@ -46,7 +46,7 @@ This skill enables correct generation of network topology diagrams, infrastructu
 | IP Phone | `shape=mxgraph.cisco19.rect;prIcon=mxgraph.cisco19.ip_phone;` | 50 x 50 |
 | Load Balancer | `shape=mxgraph.cisco19.rect;prIcon=mxgraph.cisco19.load_balancer;` | 78 x 53 |
 
-### Cisco (Legacy — for reference ONLY)
+### Cisco (Legacy: for reference ONLY)
 
 The `mxgraph.cisco.*` namespace (without `19`) is the legacy stencil set. It still renders in Draw.io but uses outdated iconography. ALWAYS prefer `mxgraph.cisco19.*`.
 

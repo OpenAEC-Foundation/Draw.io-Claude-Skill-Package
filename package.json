@@ -1,0 +1,46 @@
+{
+  "name": "@openaec/draw.io-claude-skill-package",
+  "version": "1.1.0",
+  "description": "22 deterministic Claude skills for Draw.io diagram generation",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OpenAEC-Foundation/Draw.io-Claude-Skill-Package"
+  },
+  "keywords": [
+    "agent-skills",
+    "agentskills",
+    "claude-skills",
+    "drawio",
+    "diagrams",
+    "mxgraph",
+    "ai",
+    "deterministic"
+  ],
+  "agents": {
+    "skills": [
+      { "name": "drawio-agents-code-validator", "path": "./skills/source/drawio-agents/drawio-agents-code-validator" },
+      { "name": "drawio-agents-diagram-generator", "path": "./skills/source/drawio-agents/drawio-agents-diagram-generator" },
+      { "name": "drawio-core-geometry", "path": "./skills/source/drawio-core/drawio-core-geometry" },
+      { "name": "drawio-core-styles", "path": "./skills/source/drawio-core/drawio-core-styles" },
+      { "name": "drawio-core-xml-format", "path": "./skills/source/drawio-core/drawio-core-xml-format" },
+      { "name": "drawio-errors-rendering", "path": "./skills/source/drawio-errors/drawio-errors-rendering" },
+      { "name": "drawio-errors-xml", "path": "./skills/source/drawio-errors/drawio-errors-xml" },
+      { "name": "drawio-impl-architecture", "path": "./skills/source/drawio-impl/drawio-impl-architecture" },
+      { "name": "drawio-impl-bpmn", "path": "./skills/source/drawio-impl/drawio-impl-bpmn" },
+      { "name": "drawio-impl-csv-import", "path": "./skills/source/drawio-impl/drawio-impl-csv-import" },
+      { "name": "drawio-impl-er-diagrams", "path": "./skills/source/drawio-impl/drawio-impl-er-diagrams" },
+      { "name": "drawio-impl-flowcharts", "path": "./skills/source/drawio-impl/drawio-impl-flowcharts" },
+      { "name": "drawio-impl-mermaid-conversion", "path": "./skills/source/drawio-impl/drawio-impl-mermaid-conversion" },
+      { "name": "drawio-impl-mindmaps", "path": "./skills/source/drawio-impl/drawio-impl-mindmaps" },
+      { "name": "drawio-impl-network", "path": "./skills/source/drawio-impl/drawio-impl-network" },
+      { "name": "drawio-impl-swimlanes", "path": "./skills/source/drawio-impl/drawio-impl-swimlanes" },
+      { "name": "drawio-impl-templates", "path": "./skills/source/drawio-impl/drawio-impl-templates" },
+      { "name": "drawio-impl-uml", "path": "./skills/source/drawio-impl/drawio-impl-uml" },
+      { "name": "drawio-syntax-cells", "path": "./skills/source/drawio-syntax/drawio-syntax-cells" },
+      { "name": "drawio-syntax-connections", "path": "./skills/source/drawio-syntax/drawio-syntax-connections" },
+      { "name": "drawio-syntax-metadata", "path": "./skills/source/drawio-syntax/drawio-syntax-metadata" },
+      { "name": "drawio-syntax-styles", "path": "./skills/source/drawio-syntax/drawio-syntax-styles" }
+    ]
+  }
+}
