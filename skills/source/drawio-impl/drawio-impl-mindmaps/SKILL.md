@@ -5,7 +5,9 @@ description: >
   Prevents the common mistake of using straight orthogonal connectors instead of
   curved organic lines for mind map branches. Covers central topic, branch shapes,
   curved connectors, color coding, and tree layout patterns.
-  Keywords: mind map, concept map, central topic, branch, radial, tree layout, organic connector.
+  Keywords: mind map, concept map, central topic, branch, radial, tree layout,
+  organic connector, brainstorm diagram, idea map, topic hierarchy,
+  visual brainstorming.
 license: MIT
 compatibility: "Designed for Claude Code. Requires Draw.io / diagrams.net (current)."
 metadata:

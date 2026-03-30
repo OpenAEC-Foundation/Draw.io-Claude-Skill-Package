@@ -5,7 +5,9 @@ description: >
   the user or saving to a file. Runs an 8-stage validation pipeline from XML
   well-formedness to perimeter consistency. Prevents delivering broken diagrams
   by catching structural, style, and geometry errors before output.
-  Keywords: validate diagram, check XML, verify mxGraph, validation pipeline, diagram quality.
+  Keywords: validate diagram, check XML, verify mxGraph, validation pipeline,
+  diagram quality, diagram broken, fix diagram, check Draw.io file,
+  diagram not rendering correctly.
 license: MIT
 compatibility: "Designed for Claude Code. Requires Draw.io / diagrams.net (current)."
 metadata:

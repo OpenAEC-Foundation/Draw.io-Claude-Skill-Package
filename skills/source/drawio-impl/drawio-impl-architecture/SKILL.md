@@ -5,7 +5,9 @@ description: >
   architecture diagrams in Draw.io. Prevents mixing cloud provider stencils
   in the same view or using wrong C4 color conventions. Covers C4 system context,
   container, and component diagrams, AWS/Azure/GCP stencil usage, and deployment views.
-  Keywords: C4 model, architecture diagram, system context, container diagram, AWS, Azure, GCP, deployment.
+  Keywords: C4 model, architecture diagram, system context, container diagram,
+  AWS, Azure, GCP, deployment, software architecture, cloud diagram,
+  system design, infrastructure diagram.
 license: MIT
 compatibility: "Designed for Claude Code. Requires Draw.io / diagrams.net (current)."
 metadata:

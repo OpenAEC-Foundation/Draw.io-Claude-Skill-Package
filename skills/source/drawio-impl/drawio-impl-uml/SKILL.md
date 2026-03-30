@@ -6,7 +6,9 @@ description: >
   connector styles (aggregation=open diamond, composition=filled diamond, generalization=open
   triangle). Covers class diagram compartments, sequence diagram lifelines, and all 6 UML
   relationship types with correct arrow styles.
-  Keywords: UML, class diagram, sequence diagram, use case, state machine, aggregation, composition, generalization.
+  Keywords: UML, class diagram, sequence diagram, use case, state machine,
+  aggregation, composition, generalization, software design, object model,
+  interaction diagram, class relationships.
 license: MIT
 compatibility: "Designed for Claude Code. Requires Draw.io / diagrams.net (current)."
 metadata:

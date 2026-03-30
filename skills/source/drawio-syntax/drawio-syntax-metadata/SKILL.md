@@ -5,7 +5,9 @@ description: >
   or using placeholders in Draw.io. Prevents the common mistake of nesting diagram
   elements or using wrong placeholder scope. Covers pages, layers, custom properties,
   file-level variables, placeholders, tooltips, links, and MathJax support.
-  Keywords: multi-page, layers, placeholder, variables, custom properties, tooltip, link, MathJax, metadata.
+  Keywords: multi-page, layers, placeholder, variables, custom properties,
+  tooltip, link, MathJax, metadata, multiple pages, add layer, dynamic labels,
+  custom data on shape, diagram properties.
 license: MIT
 compatibility: "Designed for Claude Code. Requires Draw.io / diagrams.net (current)."
 metadata:

@@ -5,7 +5,9 @@ description: >
   maps in Draw.io. Prevents using wrong shapes for BPMN elements (e.g., rectangles
   for gateways) or mixing sequence and message flow styles. Covers events, activities,
   gateways, pools/lanes, and sequence vs message flows per BPMN 2.0 specification.
-  Keywords: BPMN, business process, workflow, gateway, event, pool, lane, sequence flow, message flow.
+  Keywords: BPMN, business process, workflow, gateway, event, pool, lane,
+  sequence flow, message flow, process diagram, model business process,
+  workflow diagram, decision gateway.
 license: MIT
 compatibility: "Designed for Claude Code. Requires Draw.io / diagrams.net (current)."
 metadata:

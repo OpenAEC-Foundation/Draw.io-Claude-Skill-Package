@@ -5,7 +5,9 @@ description: >
   Prevents the common mistake of missing vertex/edge flags, broken parent references,
   or unescaped HTML in labels. Covers mxCell vertex/edge creation, UserObject metadata
   wrappers, HTML labels, placeholders, groups, and container nesting.
-  Keywords: mxCell, vertex, edge, UserObject, object, HTML label, container, group, parent.
+  Keywords: mxCell, vertex, edge, UserObject, object, HTML label, container,
+  group, parent, create shape, create connector, add label,
+  nest shapes, group elements.
 license: MIT
 compatibility: "Designed for Claude Code. Requires Draw.io / diagrams.net (current)."
 metadata:

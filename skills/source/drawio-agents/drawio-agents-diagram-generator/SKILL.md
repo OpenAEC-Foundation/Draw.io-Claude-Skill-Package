@@ -5,7 +5,8 @@ description: >
   from a natural language description. Orchestrates diagram type selection, skill
   routing, XML generation, and validation. Prevents generating the wrong diagram
   type by providing a comprehensive decision tree from user intent to diagram type.
-  Keywords: create diagram, generate diagram, build diagram, draw, make diagram, visualize.
+  Keywords: create diagram, generate diagram, build diagram, draw, make diagram,
+  visualize, make a flowchart, draw architecture, create UML, I need a diagram.
 license: MIT
 compatibility: "Designed for Claude Code. Requires Draw.io / diagrams.net (current)."
 metadata:

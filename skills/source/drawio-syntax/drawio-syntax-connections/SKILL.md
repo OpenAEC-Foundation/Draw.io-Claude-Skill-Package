@@ -5,7 +5,9 @@ description: >
   mistake of hardcoding waypoints instead of using edge routing, or using wrong
   exit/entry point coordinates. Covers floating vs fixed connections, edge routing
   styles, waypoints, self-loops, custom connection points, and edge labels.
-  Keywords: connection, edge, connector, exitX, exitY, entryX, entryY, edgeStyle, waypoint, orthogonal.
+  Keywords: connection, edge, connector, exitX, exitY, entryX, entryY,
+  edgeStyle, waypoint, orthogonal, connect shapes, draw arrow, link nodes,
+  connection points, curved connector.
 license: MIT
 compatibility: "Designed for Claude Code. Requires Draw.io / diagrams.net (current)."
 metadata:

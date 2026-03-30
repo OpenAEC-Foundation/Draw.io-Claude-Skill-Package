@@ -5,7 +5,9 @@ description: >
   Prevents the #1 AI mistake: generating compressed or malformed mxGraph XML
   that Draw.io cannot render. Covers the complete mxfile/diagram/mxGraphModel/root
   hierarchy, required structural cells, cell attributes, and compression rules.
-  Keywords: drawio, mxGraph, XML, mxfile, mxGraphModel, mxCell, diagram, .drawio file.
+  Keywords: drawio, mxGraph, XML, mxfile, mxGraphModel, mxCell, diagram,
+  .drawio file, Draw.io file format, edit XML, programmatic diagram,
+  generate .drawio file.
 license: MIT
 compatibility: "Designed for Claude Code. Requires Draw.io / diagrams.net (current)."
 metadata:

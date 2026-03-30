@@ -5,7 +5,9 @@ description: >
   Prevents the common mistake of using wrong shapes for flowchart elements
   (e.g., rectangle for decisions instead of rhombus). Covers all ISO 5807
   flowchart shapes, decision branching patterns, and directed flow layout.
-  Keywords: flowchart, process flow, decision tree, rhombus, diamond, terminator, process, data flow.
+  Keywords: flowchart, process flow, decision tree, rhombus, diamond, terminator,
+  process, data flow, make a flowchart, yes no diagram, if then diagram,
+  process steps, flow diagram.
 license: MIT
 compatibility: "Designed for Claude Code. Requires Draw.io / diagrams.net (current)."
 metadata:

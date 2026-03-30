@@ -5,7 +5,9 @@ description: >
   diagrams. Prevents the common mistake of missing directive lines or wrong connection
   JSON format. Covers all CSV directives (label, style, connect, layout, identity),
   column references, conditional styling, and auto-layout options.
-  Keywords: CSV import, csv-to-diagram, data-driven diagram, # label, # style, # connect, tabular data.
+  Keywords: CSV import, csv-to-diagram, data-driven diagram, # label, # style,
+  # connect, tabular data, diagram from spreadsheet, import data,
+  generate diagram from CSV, auto-generate diagram.
 license: MIT
 compatibility: "Designed for Claude Code. Requires Draw.io / diagrams.net (current)."
 metadata:

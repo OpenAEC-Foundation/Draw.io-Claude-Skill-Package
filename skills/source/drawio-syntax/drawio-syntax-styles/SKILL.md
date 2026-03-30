@@ -5,7 +5,9 @@ description: >
   or edge routing algorithms. Prevents using non-existent property names or invalid
   values. Complete reference catalog of 120+ style properties, 22 built-in shapes,
   21 arrow types, 7 edge routing algorithms, and stencil library format.
-  Keywords: style property, shape catalog, arrow type, edgeStyle, stencil, mxgraph shape, sketch mode.
+  Keywords: style property, shape catalog, arrow type, edgeStyle, stencil,
+  mxgraph shape, sketch mode, all shapes, all arrows, style reference,
+  look up property, available shapes.
 license: MIT
 compatibility: "Designed for Claude Code. Requires Draw.io / diagrams.net (current)."
 metadata:

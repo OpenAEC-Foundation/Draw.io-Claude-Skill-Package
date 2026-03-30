@@ -5,7 +5,9 @@ description: >
   Prevents the #1 layout mistake: using absolute coordinates inside containers
   instead of relative coordinates. Covers the coordinate system, vertex and edge
   geometry, waypoints, container-relative positioning, and connection points.
-  Keywords: drawio geometry, mxGeometry, coordinates, position, waypoints, connection points, exitX, entryX.
+  Keywords: drawio geometry, mxGeometry, coordinates, position, waypoints,
+  connection points, exitX, entryX, shapes overlap, wrong position,
+  edge routing, move shapes, align elements.
 license: MIT
 compatibility: "Designed for Claude Code. Requires Draw.io / diagrams.net (current)."
 metadata:

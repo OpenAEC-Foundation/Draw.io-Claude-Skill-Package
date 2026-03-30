@@ -5,7 +5,9 @@ description: >
   mistake of using wrong property names, missing html=1, or mismatched perimeters
   that cause rendering failures. Covers style string syntax, property categories,
   color system, fontStyle bitfield, and perimeter requirements.
-  Keywords: drawio style, fillColor, strokeColor, fontStyle, perimeter, shape style, mxGraph CSS.
+  Keywords: drawio style, fillColor, strokeColor, fontStyle, perimeter,
+  shape style, mxGraph CSS, change color, style shape, bold text,
+  customize appearance, shape doesn't look right.
 license: MIT
 compatibility: "Designed for Claude Code. Requires Draw.io / diagrams.net (current)."
 metadata:

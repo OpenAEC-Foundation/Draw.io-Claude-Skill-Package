@@ -5,7 +5,9 @@ description: >
   layouts in Draw.io. Prevents the #1 swimlane mistake: using absolute coordinates
   for children instead of container-relative coordinates. Covers horizontal and
   vertical swimlanes, nested lanes, header sizing, and cross-lane connections.
-  Keywords: swimlane, pool, lane, cross-functional, container, startSize, horizontal, vertical.
+  Keywords: swimlane, pool, lane, cross-functional, container, startSize,
+  horizontal, vertical, responsibility diagram, who does what,
+  department process, cross-team workflow.
 license: MIT
 compatibility: "Designed for Claude Code. Requires Draw.io / diagrams.net (current)."
 metadata:

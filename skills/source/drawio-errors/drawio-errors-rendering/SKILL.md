@@ -5,7 +5,9 @@ description: >
   misrouted, labels truncated, or layout broken. Prevents misdiagnosing visual issues
   by providing a symptom-based diagnostic decision tree. Covers invisible shapes,
   wrong connection routing, label overflow, container resize issues, and export problems.
-  Keywords: rendering issue, invisible shape, wrong routing, label truncated, layout broken, misaligned, overlap.
+  Keywords: rendering issue, invisible shape, wrong routing, label truncated,
+  layout broken, misaligned, overlap, shape not visible, text cut off,
+  diagram looks wrong, connections wrong direction.
 license: MIT
 compatibility: "Designed for Claude Code. Requires Draw.io / diagrams.net (current)."
 metadata:

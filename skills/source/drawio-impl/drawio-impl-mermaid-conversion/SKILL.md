@@ -5,7 +5,9 @@ description: >
   and native mxGraph XML. Prevents the critical mistake of expecting individually
   editable cells from Mermaid conversion (it produces a single compound shape).
   Covers supported Mermaid types, conversion methods, limitations, and decision criteria.
-  Keywords: Mermaid, mermaid-to-drawio, conversion, compound shape, open_drawio_mermaid.
+  Keywords: Mermaid, mermaid-to-drawio, conversion, compound shape,
+  open_drawio_mermaid, convert Mermaid to Draw.io, import Mermaid,
+  Mermaid diagram in Draw.io.
 license: MIT
 compatibility: "Designed for Claude Code. Requires Draw.io / diagrams.net (current)."
 metadata:

@@ -5,7 +5,9 @@ description: >
   in Draw.io. Prevents the common mistake of using generic arrows instead of
   crow's foot notation (ERone, ERmany, ERzeroToOne, etc.). Covers entity table
   shapes, PK/FK notation, all cardinality markers, and entityRelationEdgeStyle.
-  Keywords: ER diagram, entity-relationship, crow's foot, ERone, ERmany, cardinality, database schema, table.
+  Keywords: ER diagram, entity-relationship, crow's foot, ERone, ERmany,
+  cardinality, database schema, table, database diagram, data model,
+  table relationships, one-to-many, many-to-many.
 license: MIT
 compatibility: "Designed for Claude Code. Requires Draw.io / diagrams.net (current)."
 metadata:

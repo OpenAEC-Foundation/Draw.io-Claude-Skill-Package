@@ -5,7 +5,9 @@ description: >
   in Draw.io. Prevents rebuilding complex diagrams from scratch when a template exists.
   Covers the built-in template catalog (150+), custom template creation, template XML
   structure, and template modification patterns.
-  Keywords: template, diagram template, custom template, template catalog, reusable diagram.
+  Keywords: template, diagram template, custom template, template catalog,
+  reusable diagram, start from template, pre-built diagram, diagram library,
+  save as template.
 license: MIT
 compatibility: "Designed for Claude Code. Requires Draw.io / diagrams.net (current)."
 metadata:

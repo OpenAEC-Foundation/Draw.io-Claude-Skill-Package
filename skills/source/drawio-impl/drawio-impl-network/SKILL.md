@@ -5,7 +5,9 @@ description: >
   architecture diagrams in Draw.io. Prevents using wrong stencil namespaces
   (e.g., mxgraph.cisco vs mxgraph.cisco19). Covers Cisco/AWS/Azure/GCP stencils,
   network topology patterns, zone boundaries, and rack diagrams.
-  Keywords: network diagram, topology, Cisco, AWS, Azure, GCP, stencil, router, switch, server, cloud.
+  Keywords: network diagram, topology, Cisco, AWS, Azure, GCP, stencil, router,
+  switch, server, cloud, infrastructure diagram, network layout, server rack,
+  IT architecture, network map.
 license: MIT
 compatibility: "Designed for Claude Code. Requires Draw.io / diagrams.net (current)."
 metadata:

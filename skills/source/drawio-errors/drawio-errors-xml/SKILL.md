@@ -6,7 +6,9 @@ description: >
   tree from symptom to root cause to fix. Covers XML structure errors, missing
   required cells, duplicate IDs, broken parent references, invalid styles, and
   HTML escaping issues.
-  Keywords: drawio error, XML error, diagram broken, not rendering, duplicate ID, missing cell, invalid style.
+  Keywords: drawio error, XML error, diagram broken, not rendering, duplicate ID,
+  missing cell, invalid style, diagram won't open, Draw.io shows error,
+  blank diagram, XML parse error.
 license: MIT
 compatibility: "Designed for Claude Code. Requires Draw.io / diagrams.net (current)."
 metadata:
